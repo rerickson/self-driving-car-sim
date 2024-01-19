@@ -22,4 +22,12 @@ class Segment {
         ctx.stroke();
         ctx.setLineDash([]);
     }
+
+    length() {
+        return distance(this.p1, this.p2);
+    }
+
+    directionVector(){
+        return normalize(subtract(this.p2, this.p1));
+    }
 }
