@@ -96,4 +96,15 @@ class Polygon{
         ctx.fill();
         ctx.stroke();
     }
+
+    intersectsPoly(poly){
+        for(let s1 of this.segments){
+            for(let s2 of poly.segments){
+                if(getIntersection(s1.p1, s1.p2, s2.p1, s2.p2)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
