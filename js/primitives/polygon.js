@@ -107,4 +107,8 @@ class Polygon{
         }
         return false;
     }
+
+    distanceToPoint(point){
+        return Math.min(...this.segments.map((s)=> s.distanceToPoint(point)));
+    }
 }
