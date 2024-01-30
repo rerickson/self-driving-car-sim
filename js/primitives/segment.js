@@ -48,7 +48,7 @@ class Segment {
         const normB = normalize(b);
         const scaler = dot(a, normB);
         const proj = {
-            point: addEventListener(this.p1, scale(normB, scaler)),
+            point: add(this.p1, scale(normB, scaler)),
             offset: scaler/magnitude(b)
         };
         return proj;
